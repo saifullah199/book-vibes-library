@@ -12,7 +12,7 @@ const BookDetail = () => {
             <div className="card lg:card-side bg-base-100 shadow-xl">
   <div>
   <figure>
-    <img className="w" src={book.image} alt="Album"/>
+    <img className="" src={book.image} alt="Album"/>
     </figure>
   </div>
   <div className="card-body">
