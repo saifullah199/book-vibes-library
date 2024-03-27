@@ -1,30 +1,33 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { saveReadBooks } from "../utilitys/localStorage";
+import { saveBook } from "../utilitys";
 
 const BookDetail = () => {
     const books = useLoaderData ();
     const {id} = useParams()
     const idInt = parseInt(id);
     const book = books.find(book =>book.id === idInt);
-    console.log( book);
+    // console.log( book);
 
-    const handleRead =() =>{
-      saveReadBooks(id);
-      toast('you have added to read books successfully')
+    const handleRead =(book) =>{
+      // saveReadBooks(id);
+      // toast('you have added to read books successfully')
+      saveBook(book)
     }
     const handleWishList =() =>{
-      saveReadBooks(id);
-      toast('you have added to Wishlist successfully')
+      // saveReadBooks(id);
+      // toast('you have added to Wishlist successfully')
+      saveBook(book)
     }
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl">
   <div>
   <figure>
-    <img className="" src={book.image} alt="Album"/>
+    <img className="w-[500px]" src={book.image} alt="Album"/>
     </figure>
   </div>
   <div className="card-body">
@@ -40,8 +43,11 @@ const BookDetail = () => {
     <p>Year of Publishing:{book.yearOfPublishing} </p>
     <p>Rating:{book.rating} </p>
     <div className="card-actions ">
-      <button onClick={() => handleRead(book)} className="btn btn-primary"> Read</button>
-      <button onClick={handleWishList} className="btn btn-primary">WishList</button>
+      
+        
+        <button onClick={()=> handleRead(book)} className="btn btn-primary"> Read</button>
+      
+      <button onClick={() => handleWishList(book)} className="btn btn-primary">WishList</button>
     </div>
   </div>
 </div>
