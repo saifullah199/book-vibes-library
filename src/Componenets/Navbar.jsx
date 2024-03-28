@@ -15,15 +15,15 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li> <NavLink to="/" className={({isActive}) =>
-         isActive ? 'text-primary font-bold' : 'font-bold'
+         isActive ? 'btn btn-outline btn-success font-bold' : 'font-bold'
          }>Home</NavLink> </li> 
         
       <li> <NavLink to= "/listed-books" className={({isActive}) =>
-      isActive ? 'text-primary font-bold' : 'font-bold'
+      isActive ? 'btn btn-outline btn-success font-bold' : 'font-bold'
       }>Listed Books</NavLink> </li>
 
       <li> <NavLink  to="pages-to-read"  className={({isActive}) =>
-      isActive ? 'text-primary font-bold' : 'font-bold'
+      isActive ? 'btn btn-outline btn-success font-bold' : 'font-bold'
       }>Pages to Read</NavLink> </li>
       </ul>
     </div>
