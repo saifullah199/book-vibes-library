@@ -13,7 +13,7 @@ import PagesToRead from './Componenets/Pages/PagesToRead';
 import BookDetail from './Componenets/BookDetail';
 import ReadBooks from './Componenets/ReadBooks';
 import Wishlist from './Componenets/Wishlist';
-import Book from './Componenets/Book';
+
 
 
 const router = createBrowserRouter([
@@ -29,16 +29,12 @@ const router = createBrowserRouter([
       {
         path:'/listed-books',
         element:<ListedBooks></ListedBooks>,
-        // loader:({params}) => fetch(`/Book.json/${params?.id}`),
+        
         
         
       },
-      // {
-      //   path:'/book/:id',
-      //   element:<Book></Book>,
-      //   loader:({params}) => fetch(`/Book.json/${params?.id}`),
-        
-      // },
+    
+      
       {
         path: '/readbook',
        
