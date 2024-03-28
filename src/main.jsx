@@ -13,6 +13,8 @@ import PagesToRead from './Componenets/Pages/PagesToRead';
 import BookDetail from './Componenets/BookDetail';
 import ReadBooks from './Componenets/ReadBooks';
 import Wishlist from './Componenets/Wishlist';
+import Error from './Componenets/Error';
+
 
 
 
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement:<Error></Error> ,
     children: [
       {
         path: '/',
@@ -46,18 +48,7 @@ const router = createBrowserRouter([
       },
       
       
-      // {
-      //   path: '/readbook',
-       
-      //   element: <ReadBooks></ReadBooks>,
-      //   loader:() => fetch('/Book.json')
-      // },
-      // {
-      //   path: '/wishlist',
-        
-      //   element: <Wishlist></Wishlist>,
-      //   loader:() => fetch('/Book.json')
-      // },
+      
       
       {
         path: '/pages-to-read',
