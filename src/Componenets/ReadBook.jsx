@@ -22,9 +22,9 @@ const ReadBook = ({book}) => {
     </div>
     <hr />
     <div className="card-actions ">
-      <button className="btn btn-primary">Category: {category} </button>
-      <button className="btn btn-primary">Rating: {rating}  </button>
-      <Link to={`/book/${id}`}> <button className="btn btn-primary">View Details </button> </Link>
+      <button className="btn btn-outline btn-info">Category: {category} </button>
+      <button className="btn btn-outline btn-secondary">Rating: {rating}  </button>
+      <Link to={`/book/${id}`}> <button className="btn btn-outline btn-success">View Details </button> </Link>
     </div>
   </div>
 </div>

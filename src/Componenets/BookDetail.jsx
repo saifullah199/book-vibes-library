@@ -45,9 +45,9 @@ const BookDetail = () => {
     <div className="card-actions ">
       
         
-        <button onClick={()=> handleRead(book)} className="btn btn-primary"> Read</button>
+        <button onClick={()=> handleRead(book)} className="btn btn-outline btn-accent"> Read</button>
       
-      <button onClick={() => handleWishList(book)} className="btn btn-primary">WishList</button>
+      <button onClick={() => handleWishList(book)} className="btn btn-outline btn-info">WishList</button>
     </div>
   </div>
 </div>

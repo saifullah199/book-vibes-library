@@ -1,11 +1,14 @@
 
 
+
 const PagesToRead = () => {
-    return (
-        <div>
-            <h3>Pages I read</h3>
+    
+      return (
+        <div className="">
+          Pages I read
         </div>
-    );
+      );
 };
 
 export default PagesToRead;
+
